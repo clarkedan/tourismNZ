@@ -1,0 +1,43 @@
+.myBody{
+    min-height:100vh;
+    min-width: 100%;
+    // margin-top: 100px;
+    background: url(../../images/nzRoad3.jpg)no-repeat center center fixed;
+    background-size: cover;
+}
+.bodyContainer{
+    min-height: 100%;
+    position: relative;
+}
+.myBody__started{
+    width: 520px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -260px;
+    margin-top: -40px;
+}
+.myBody__btn{
+    width: 100%;
+    font-family: montserrat;
+    font-size: 3em;
+    font-weight: 600;
+    color: $white;
+    background-color: $black;
+    opacity: 0.88;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px; 
+    letter-spacing: 4px;
+    
+}
+button.myBody__btn:hover{
+    background-color: $darkGreen;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+

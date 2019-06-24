@@ -1,0 +1,91 @@
+.dropOff{
+    height: 160px;
+    // background-color: #333;
+    background-color:$myBlack;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+.dropOff__left{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.dropOff__back{
+    height: 100px;
+    float: right;
+    cursor: pointer;
+}
+.dropOff__back--orange{
+    fill: $orange;
+    opacity: 0.80;
+}
+.dropOff__back--orange:hover{
+    opacity: 1;
+}
+.dropOff__center{
+    height: 160px;
+    width: 60%;
+    // background-color: #666;
+    text-align: center; 
+    padding-top: 10px;
+}
+.dropOff__centerTop{
+   height: 40%;
+}
+.dropOff__center--text{
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 600; 
+    letter-spacing: 3px;
+}
+.dropOff__right{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.dropOff__forward{
+    height: 100px;
+    cursor: pointer;
+}
+.dropOff__forward--green{
+    fill: $green;
+    opacity: 0.85;
+}
+.dropOff__forward--green:hover{
+    opacity: 1;
+}
+.dropOff__centerBottom{
+    margin-top: 10px;
+}
+.btn {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    width: 200px;
+    letter-spacing: 3px;
+    border: none;
+    font-size: 2rem;
+    border-radius: 0.50rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: $grey;
+    color: black;
+}
+.btn:hover{
+    color: $white;
+}
+.dropdown-menu{
+    width: 200px;
+    font-size: 1.5em;
+}
+.show{
+    letter-spacing: 3px;
+    padding-right: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+.dropOff__locations{
+    margin: 10px;
+    cursor: pointer;
+}

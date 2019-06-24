@@ -1,0 +1,87 @@
+.myFooter{
+    height: 65px;
+    width: 100%;
+    background-color: $myBlack;
+    position: absolute;
+    bottom: 0;
+}
+.myFooter__social{
+    height: 100%;
+    width: 50%;
+    padding-left: 15px;
+    padding-top: 15px;
+    float: left;
+}
+.myFooter__pure{
+    height: 100%;
+    width: 50%;
+    float: right;
+    padding-right: 15px;
+    padding-top: 12px;
+}
+.myFooter{
+    clear: right;
+}
+.myFooter__social a{
+    display: inline-block;
+}
+.myFooter__face{
+    height: 35px;
+}
+.myFooter__face--orange{
+    fill: $white;
+}
+.myFooter__face--orange:hover{
+    fill: $orange;
+}
+.myFooter__insta{
+    height: 35px;
+    margin-left: 10px;
+}
+.myFooter__insta--orange{
+    fill: $white;
+}
+.myFooter__insta--orange:hover{
+    fill: $orange;
+}
+.myFooter__twit{
+    height: 35px;
+    margin-left: 10px;
+}
+.myFooter__twit--orange{
+    fill: $white;
+}
+.myFooter__twit--orange:hover{
+    fill: $orange;
+}
+.myFooter__tube{
+    height: 35px;
+    margin-left: 10px;
+}
+.myFooter__tube--orange{
+    fill: $white;
+}
+.myFooter__tube--orange:hover{
+    fill: $orange;
+}
+.myFooter__google{
+    height: 35px;
+    margin-left: 10px;
+}
+.myFooter__google--orange{
+    fill: $white;
+}
+.myFooter__google--orange:hover{
+    fill: $orange;
+}
+.myFooter_pureLogo{
+    height: 45px;
+    float: right;
+}
+.myFooter_pureLogo--grey{
+    fill: $white;
+}
+// .myFooter_pureLogo--grey:hover{
+//     fill: $grey;
+// }
+

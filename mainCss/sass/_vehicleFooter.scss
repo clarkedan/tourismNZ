@@ -1,0 +1,144 @@
+.vehicle{
+    height: 160px;
+    background-color:$myBlack;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+.vehicle__left{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.vehicle__back{
+    height: 100px;
+    float: right;
+    cursor: pointer;
+}
+.vehicle__back--orange{
+    fill: $orange;
+    opacity: 0.80;
+}
+.vehicle__back--orange:hover{
+    opacity: 1;
+}
+.vehicle__center{
+    height: 160px;
+    width: 60%;
+    text-align: center; 
+    padding-top: 10px;
+}
+.vehicle__centerTop{
+    height: 40%;
+    width: 100%;
+}
+.vehicle__center--text{
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 600; 
+    letter-spacing: 3px;
+}
+.vehicle__right{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.vehicle__forward{
+    height: 100px;
+    cursor: pointer;
+}
+.vehicle__forward--green{
+    fill: $green;
+    opacity: 0.85;
+}
+.vehicle__forward--green:hover{
+    opacity: 1;
+}
+.vehicle__centerBottom{
+    width: 100%;
+    position: flex;
+    display: inline-flex;
+    justify-content: center; 
+    margin: 0 auto;
+}
+// 1 seater
+.vehicle__centerMoto{
+    width: 25%;
+    float: left;
+}
+.vehicle__moto{
+    height: 50px;
+    margin-bottom: 3px;
+    cursor: pointer;
+
+}
+.vehicle__moto--color{
+    fill: $grey;
+}
+.vehicle__centerMoto--text{
+    color: $white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+// 2 seater
+.vehicle__centerCoupe{
+    width: 25%;
+}
+.vehicle__coupe{
+    height: 50px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+.vehicle__coupe--color{
+    fill: $grey;
+}
+.vehicle__centerCoupe--text{
+    color: $white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+// 5 seater
+.vehicle__centerHatch{
+    width: 25%;
+}
+.vehicle__hatch{
+    height: 50px;
+    margin-bottom: 3px;
+}
+.vehicle__hatch--color{
+    fill: $grey;
+    cursor: pointer;
+}
+.vehicle__hatch--text{
+    color: $white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+// 7 seater
+.vehicle__centerFamily{
+    width: 25%;
+}
+.vehicle__family{
+    height: 50px;
+    margin-bottom: 3px;
+}
+.vehicle__family--color{
+    fill: $grey;
+    cursor: pointer;
+}
+.vehicle__family--text{
+    color: $white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+

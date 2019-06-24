@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NZ Tourism</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favicon/favicon.png">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="mainCss/css/style.css">
+</head>
+
+<body>
+  <!-- navagation -->
+  <nav class="navbar navbar-default fixed-top myNav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img class="myNav__logo" id="myLogo" alt="" src="images/SVG/logoDark.svg">
+        </a>
+      </div>
+      <div class="navbar-right">
+        <svg data-toggle="modal" data-target="#modalHow" class="myNav__question" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 55.57 50.05">
+          <defs>
+            <style>.cls-1{fill:#fbfdff;}</style>
+          </defs>
+          <title>Asset 5</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <path class="myNav_question--grey" d="M55.57,0H10.18A10.31,10.31,0,0,0,0,10.4V50.05l7.25-7.82h38a10.28,10.28,0,0,0,10.14-9.4m-25.24-9a24.64,24.64,0,0,0-.1,2.72,1.06,1.06,0,0,1-.21.73.91.91,0,0,1-.61.21H25.59c-.51,0-.72-.21-.72-.73a15.94,15.94,0,0,1,.72-5.86,8.17,8.17,0,0,1,2.55-2.71,8.44,8.44,0,0,0,1.94-1.88,2.54,2.54,0,0,0,.51-2.83,3.21,3.21,0,0,0-3-1.67,3.61,3.61,0,0,0-3.57,2.82c-.1.53-.21.94-.82.94a4.59,4.59,0,0,0-.51-.1c-1.12-.21-2.14-.31-3.16-.42a1.09,1.09,0,0,1-.92-.94c.41-4.7,4.9-7.21,9.08-7.21a9.31,9.31,0,0,1,6.33,2.2,7.21,7.21,0,0,1,2.45,5.22c0,2.82-2.15,4.81-4.09,6.48-.2.21-.4.31-.61.52l-.2.21A3.66,3.66,0,0,0,30.18,23.78Zm.51,9.93a3.14,3.14,0,0,1-.82,2.19,3.27,3.27,0,0,1-2.14.84,3,3,0,0,1-2.86-2.93,2.89,2.89,0,0,1,2.86-2.92A3,3,0,0,1,30.69,33.71Z" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </nav>
+  <!-- body -->
+  <div class="bodyContainer">
+    <div class="container-fluid myBody" id="nzRoad">
+      <div class="myBody__started" id="start">
+        <button class="myBody__btn" id="startButton">Let's Get Started</button>
+      </div>
+    </div>
+    <!-- map -->
+    <div class="myMap" id="nzMap">
+    </div>
+    <!-- modal How it all works  -->
+    <div class="modal fade" id="modalHow" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modalWorks">
+          <div class="modal-header">
+            <h1 class="modalWorks__header">How it all works</h1>
+            <button type="button" class="close myClose" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modalWorks__body">
+            <ol>
+              <li><span class="modalWorks__body--white">Choose a pick up and drop off location (can't be the same),
+                  icons on the map will show your pick up and drop off location as well as charging stations along the
+                  way.</span></li>
+              <li><span class="modalWorks__body--white">Verify how many days you wish to be traveling using our
+                  electric car hire and tour.</span></li>
+              <li><span class="modalWorks__body--white">Identify how many people will be traveling in the electric
+                  vehicle (including the driver).</span></li>
+              <li><span class="modalWorks__body--white">Select an electric vehicle to hire and proceed.</span></li>
+            </ol>
+            <div class="modalWorks__conditions">
+              <p>HIRING CONDITIONS:</p>
+            </div>
+            <ul>
+              <li><span class="modalWorks__span">MOTORCYCLE: </span> 1 passanger, 1 day min - 5 day max hire.</li>
+              <li><span class="modalWorks__span">COUPE: </span> 1-2 passangers, 1 day min - 10 day max hire.</li>
+              <li><span class="modalWorks__span">HATCH: </span> 1-5 passangers, 3 day min - 10 day max hire.</li>
+              <li><span class="modalWorks__span">FAMILY WAGON: </span> 2-6 passangers, 1 day min - 5 day max hire.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal 1 seater  -->
+    <div class="modal fade" id="modalMoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modalOneSeat">
+          <div class="modal-header">
+            <h1 class="modalOneSeat__header">MOTORCYCLE</h1>
+            <button type="button" class="close myClose" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modalOneSeat__info">
+              <p>The Zero DS | DSR electric motorcycle is a perfect choise for the solo traveler. For the voyager that
+                really want to feel the curvature of our landscape as they tour the country. <a href="https://www.zeromotorcycles.com/zero-ds/"
+                  target="blank"><span class="modalOneSeat__more">For more info on this motorcycle check out Zero's
+                    specs page here.</span></a></p>
+            </div>
+            <div class="modalOneSeat__price">
+              PRICE PER DAY:<br><span class="answer">$109incl</span>
+            </div>
+            <div class="modalOneSeat__Kw">
+              AVERAGE USAGE OF KILOWATTS:<br><span class="answer">"3.7Kw/100km"</span>
+            </div>
+            <div class="modalOneSeat__pickUp">
+              DISTANCE:<br><span id="motoDist" class="answer">"#"</span>
+            </div>
+            <div class="modalOneSeat__pickUp">
+              PICK UP LOCATION:<br><span id="motoPick" class="answer">"#"</span>
+            </div>
+            <div class="modalOneSeat__dropOff">
+              DROP OFF LOCATION:<br><span id="motoDrop" class="answer">"#"</span>
+            </div>
+            <div class="modalOneSeat__days">
+              NUMBER OF DAYS:<br><span id="motoDays" class="answer">"#"</span>
+            </div>
+            <div class="modalOneSeat__people">
+              NUMBER OF PEOPLE:<br><span id="motoPeople" class="answer">"#"</span>
+            </div>
+            <div class="modalOneSeat__total">
+              TOTAL PRICE FOR CAR HIRE:<br><span id="motoTotal" class="answer">"#"</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="buttonBack" data-dismiss="modal">GO BACK</button>
+            <button type="button" id="confirmMoto" class="buttonProceed" data-dismiss="modal">CONFIRM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal 2 seater  -->
+    <div class="modal fade" id="modalCoupe" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modalTwoSeat">
+          <div class="modal-header">
+            <h1 class="modalTwoSeat__header">COUPE</h1>
+            <button type="button" class="close myClose" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modalTwoSeat__info">
+              <p>The Renault Zoe electric 2 seater coupe is a great selection for a couple or just 2 BFF's on a
+                vaction. For the light travelers this electric vehicle offers a really economic way to view this
+                beautiful land. <a href="https://www.renault.co.nz/vehicles/zoe-ev/" target="blank"><span class="modalTwoSeat__more">For
+                    more info on this 2 seater coupe check out Renault's specs page here.</span></a></p>
+            </div>
+            <div class="modalTwoSeat__price">
+              PRICE PER DAY:<br><span class="answer">$129incl</span>
+            </div>
+            <div class="modalTwoSeat__Kw">
+              AVERAGE USAGE OF KILOWATTS:<br><span class="answer">8.5Kw/100km</span>
+            </div>
+            <div class="modalTwoSeat__pickUp">
+              DISTANCE:<br><span id="coupeDist" class="answer">"#"</span>
+            </div>
+            <div class="modalTwoSeat__pickUp">
+              PICK UP LOCATION:<br><span id="coupePick" class="answer">"#"</span>
+            </div>
+            <div class="modalTwoSeat__dropOff">
+              DROP OFF LOCATION:<br><span id="coupeDrop" class="answer">"#"</span>
+            </div>
+            <div class="modalTwoSeat__days">
+              NUMBER OF DAYS:<br><span id="coupeDays" class="answer">"#"</span>
+            </div>
+            <div class="modalTwoSeat__people">
+              NUMBER OF PEOPLE:<br><span id="coupePeople" class="answer">"#"</span>
+            </div>
+            <div class="modalTwoSeat__total">
+              TOTAL PRICE FOR CAR HIRE:<br><span id="coupeTotal" class="answer">"#"</span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="buttonBack" data-dismiss="modal">GO BACK</button>
+              <button type="button" id="confirmCoupe" class="buttonProceed" data-dismiss="modal">CONFIRM</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal 5 seater  -->
+    <div class="modal fade" id="modalHatch" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modalFiveSeat">
+          <div class="modal-header">
+            <h1 class="modalFiveSeat__header">HATCH BACK</h1>
+            <button type="button" class="close myClose" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modalFiveSeat__info">
+              <p>The Hyundai Ioniq-ev 5 seater hatch is a great car for a small family or group of friends. This
+                comfortable ride will find you relaxing along your adventure as the evergreen hillsides of this country
+                pass you by. <a href="https://www.hyundai.co.nz/electric-cars/ioniq-ev" target="blank"><span class="modalFiveSeat__more">For
+                    more info on this 5 seater hatch check out Hyundai's specs page here.</span></a></p>
+            </div>
+            <div class="modalFiveSeat__price">
+              PRICE PER DAY:<br><span class="answer">$144incl</span>
+            </div>
+            <div class="modalFiveSeat__Kw">
+              AVERAGE USAGE OF KILOWATTS:<br><span class="answer">9.7Kw/100km</span>
+            </div>
+            <div class="modalFiveSeat__pickUp">
+              <Datag>DISTANCE</Datag>:<br><span id="hatchDist" class="answer">"#"</span>
+            </div>
+            <div class="modalFiveSeat__pickUp">
+              PICK UP LOCATION:<br><span id="hatchPick" class="answer">"#"</span>
+            </div>
+            <div class="modalFiveSeat__dropOff">
+              DROP OFF LOCATION:<br><span id="hatchDrop" class="answer">"#"</span>
+            </div>
+            <div class="modalFiveSeat__days">
+              NUMBER OF DAYS:<br><span id="hatchDays" class="answer">"#"</span>
+            </div>
+            <div class="modalFiveSeat__people">
+              NUMBER OF PEOPLE:<br><span id="hatchPeople" class="answer">"#"</span>
+            </div>
+            <div class="modalFiveSeat__total">
+              TOTAL PRICE FOR CAR HIRE:<br><span id="hatchTotal" class="answer">"#"</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="buttonBack" data-dismiss="modal">GO BACK</button>
+            <button type="button" id="confirmHatch" class="buttonProceed" data-dismiss="modal">CONFIRM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal 7 seater  -->
+    <div class="modal fade" id="modalFamily" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modalSevenSeat">
+          <div class="modal-header">
+            <h1 class="modalSevenSeat__header">FAMILY WAGON</h1>
+            <button type="button" class="close myClose" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modalSevenSeat__info">
+              <p>The Nissan NV200 Combi 7 seater family wagon is the ultimate electric vehicle for a large family who
+                need a lot of space. Not the most economic option in our range but definitely the most roomy! <a href="https://www.nissan.co.uk/vehicles/new-vehicles/e-nv200-combi.html"
+                  target="blank"><span class="modalSevenSeat__more">For more info on this 7 seater family wagon check
+                    out Nissan's specs page here.</span></a></p>
+            </div>
+            <div class="modalSevenSeat__price">
+              PRICE PER DAY:<br><span class="answer">$200incl</span>
+            </div>
+            <div class="modalSevenSeat__Kw">
+              AVERAGE USAGE OF KILOWATTS:<br><span class="answer">17Kw/100km</span>
+            </div>
+            <div class="modalSevenSeat__pickUp">
+              DISTANCE:<br><span id="familyDist" class="answer">"#"</span>
+            </div>
+            <div class="modalSevenSeat__pickUp">
+              PICK UP LOCATION:<br><span id="familyPick" class="answer">"#"</span>
+            </div>
+            <div class="modalSevenSeat__dropOff">
+              DROP OFF LOCATION:<br><span id="familyDrop" class="answer">"#"</span>
+            </div>
+            <div class="modalSevenSeat__days">
+              NUMBER OF DAYS:<br><span id="familyDays" class="answer">"#"</span>
+            </div>
+            <div class="modalSevenSeat__people">
+              NUMBER OF PEOPLE:<br><span id="familyPeople" class="answer">"#"</span>
+            </div>
+            <div class="modalSevenSeat__total">
+              TOTAL PRICE FOR CAR HIRE:<br><span id="familyTotal" class="answer">"#"</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="buttonBack" data-dismiss="modal">GO BACK</button>
+            <button type="button" id="confirmFam" class="buttonProceed" data-dismiss="modal">CONFIRM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer myFooter" id="myFooter">
+      <div class="container-fluid">
+        <div class="myFooter__social">
+          <a href="https://www.facebook.com/purenewzealand/" target="_blank">
+            <svg class="myFooter__face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.04 41.42">
+              <defs></defs>
+              <title>Asset 10</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="myFooter__face--orange" d="M38.08,0H3A3,3,0,0,0,0,3V38.46a3,3,0,0,0,3,3h18.9s0-.08,0-.11V25.59H16.71c-.23,0-.23,0-.23-.22,0-1.94,0-3.88,0-5.81,0-.18.06-.22.23-.22h5.16v-.19c0-1.61,0-3.22,0-4.83a8.86,8.86,0,0,1,.83-3.72,6.71,6.71,0,0,1,3.59-3.42,8.66,8.66,0,0,1,3.41-.65c1.34,0,2.69.08,4,.13.25,0,.5,0,.75.07s.19.06.19.2c0,.8,0,1.6,0,2.4s0,1.89,0,2.84c0,.16-.05.21-.21.21-1,0-2.05,0-3.07,0a7.12,7.12,0,0,0-1.38.16,1.93,1.93,0,0,0-1.57,1.64,5.55,5.55,0,0,0-.11,1.07c0,1.32,0,2.63,0,3.94,0,0,0,.08,0,.14H34.2c.25,0,.25,0,.22.24-.13,1-.27,2.06-.4,3.09-.11.86-.22,1.72-.32,2.59,0,.33,0,.33-.36.33h-5V41.42h9.76a3,3,0,0,0,3-3V3A3,3,0,0,0,38.08,0Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/purenewzealand/?hl=en/" target="_blank">
+            <svg class="myFooter__insta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.32 41.64">
+              <defs></defs>
+              <title>Asset 2</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="myFooter__insta--orange" d="M12.94,34.29H30.35A5.67,5.67,0,0,0,36,28.63V12.57a5.66,5.66,0,0,0-5.66-5.65H12.94a5.66,5.66,0,0,0-5.66,5.65V28.63A5.67,5.67,0,0,0,12.94,34.29ZM31.51,8.89A2.11,2.11,0,1,1,29.4,11,2.12,2.12,0,0,1,31.51,8.89Zm-9.73,1.55A10.3,10.3,0,0,1,32.2,20.58,10.3,10.3,0,0,1,21.78,30.72,10.29,10.29,0,0,1,11.36,20.58,10.29,10.29,0,0,1,21.78,10.44ZM28.2,20.58a6.29,6.29,0,0,1-6.42,6.14,6.29,6.29,0,0,1-6.42-6.14,6.29,6.29,0,0,1,6.42-6.14A6.29,6.29,0,0,1,28.2,20.58ZM37.56,0H5.77A5.77,5.77,0,0,0,0,5.77V35.88a5.76,5.76,0,0,0,5.77,5.76H37.56a5.76,5.76,0,0,0,5.76-5.76V5.77A5.76,5.76,0,0,0,37.56,0ZM40,28.63a9.67,9.67,0,0,1-9.66,9.66H12.94a9.67,9.67,0,0,1-9.66-9.66V12.57a9.66,9.66,0,0,1,9.66-9.65H30.35A9.66,9.66,0,0,1,40,12.57Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a href="https://twitter.com/purenewzealand?lang=en" target="_blank">
+            <svg class="myFooter__twit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.32 41.64">
+              <defs></defs>
+              <title>Asset 3</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="myFooter__twit--orange" d="M37.56,0H5.77A5.77,5.77,0,0,0,0,5.77V35.88a5.76,5.76,0,0,0,5.77,5.76H37.56a5.76,5.76,0,0,0,5.76-5.76V5.77A5.76,5.76,0,0,0,37.56,0ZM35.43,13.76c0,.3,0,.61,0,.92,0,9.39-7.14,20.22-20.21,20.22a20.11,20.11,0,0,1-10.9-3.2,13.62,13.62,0,0,0,1.7.1,14.21,14.21,0,0,0,8.82-3,7.12,7.12,0,0,1-6.64-4.93A7.42,7.42,0,0,0,9.56,24a6.76,6.76,0,0,0,1.87-.25,7.1,7.1,0,0,1-5.7-7v-.09A7.18,7.18,0,0,0,9,17.54a7.12,7.12,0,0,1-2.2-9.49A20.15,20.15,0,0,0,21.4,15.47a7.18,7.18,0,0,1-.18-1.62A7.11,7.11,0,0,1,33.51,9,14.3,14.3,0,0,0,38,7.27,7.1,7.1,0,0,1,34.9,11.2,14.25,14.25,0,0,0,39,10.08,14.44,14.44,0,0,1,35.43,13.76Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/purenewzealand" target="_blank">
+            <svg class="myFooter__tube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.8 42.81">
+              <defs>
+                <style>.cls-1{fill:#fbfdff;}</style>
+              </defs>
+              <title>Asset 6</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="myFooter__tube--orange" d="M15,22.49a9.75,9.75,0,0,1,0,1.7H13.13a.29.29,0,0,0-.29.3V35.34a.31.31,0,0,1-.3.3h-1.4a.31.31,0,0,1-.3-.3V24.49a.29.29,0,0,0-.29-.3H9.06a.29.29,0,0,1-.29-.3V22.5a.29.29,0,0,1,.29-.29h5.66A.3.3,0,0,1,15,22.49Zm5.27,3.22h-1.2a.29.29,0,0,0-.3.29v7.27a1.59,1.59,0,0,1-1.13.85c-.48,0-.48-.37-.48-.37V26a.29.29,0,0,0-.3-.29h-1.2a.3.3,0,0,0-.3.29v7.93c0,1.23.39,1.89,1.43,1.89a2.4,2.4,0,0,0,1.48-.7.3.3,0,0,1,.5.22v.09a.29.29,0,0,0,.3.3h1.5V26A.3.3,0,0,0,20.29,25.71Zm7.2,1.6v6.62s-.19,1.89-1.32,1.89a2.52,2.52,0,0,1-1.68-.61.3.3,0,0,0-.5.22.29.29,0,0,1-.29.3H22.5a.29.29,0,0,1-.3-.3V22.6a.29.29,0,0,1,.3-.3h1.2a.29.29,0,0,1,.29.3v3.33a.3.3,0,0,0,.5.22,2.26,2.26,0,0,1,1.3-.64A1.66,1.66,0,0,1,27.49,27.31Zm-1.79,1c0-.66-.29-1-.76-1a1.29,1.29,0,0,0-.74.28.28.28,0,0,0-.11.23v5.9a.3.3,0,0,0,.08.21,1.26,1.26,0,0,0,.77.28c.76,0,.76-.85.76-.85ZM42.8,9.47V33.34a9.47,9.47,0,0,1-9.47,9.47H9.47A9.47,9.47,0,0,1,0,33.34V9.47A9.47,9.47,0,0,1,9.47,0H33.33A9.47,9.47,0,0,1,42.8,9.47Zm-18,5.64a1.31,1.31,0,0,0,1.41,1.5,2.59,2.59,0,0,0,1.48-.72.3.3,0,0,1,.49.22v.11a.3.3,0,0,0,.3.3H29.7a.29.29,0,0,0,.3-.3V6.87a.29.29,0,0,0-.3-.29H28.22v7.53a.31.31,0,0,1,0,.13,1.63,1.63,0,0,1-1,.76l-.1,0c-.6,0-.51-.47-.51-.47V6.87a.3.3,0,0,0-.3-.29H25.14a.3.3,0,0,0-.3.29ZM18.09,14a3.25,3.25,0,0,0,.47,1.5,2.41,2.41,0,0,0,1.85,1.1,4.13,4.13,0,0,0,.7,0,2.38,2.38,0,0,0,1.76-1.09,3.25,3.25,0,0,0,.47-1.5V9.3a8.44,8.44,0,0,0-.09-.91.13.13,0,0,0,0-.06,2.6,2.6,0,0,0-2.12-1.8,2.31,2.31,0,0,0-.83,0,2.6,2.6,0,0,0-2.1,1.8.43.43,0,0,1,0,.05,8.94,8.94,0,0,0-.09.92ZM11.27,3.59,13.67,11a.31.31,0,0,1,0,.1v5a.31.31,0,0,0,.3.3h1.28a.31.31,0,0,0,.3-.3v-5a.19.19,0,0,1,0-.08l2.31-7.45a.3.3,0,0,0-.29-.39H16.25a.29.29,0,0,0-.28.22L14.62,8.36,13.27,3.42A.29.29,0,0,0,13,3.2H11.56A.3.3,0,0,0,11.27,3.59ZM37,29.31v0c-.18-4.07.09-9.35-3.22-9.83-2.17-.38-4.63-.28-12.47-.38-5.3,0-8,.1-8.33.1-3.4.19-5.77-.28-6.62,3.4a41,41,0,0,0-.56,6.76C6,33.75,5.65,39,9.9,39.42c2.18.19,7.85.28,11.59.28,5.1,0,10.64-.09,12.53-.48a3.6,3.6,0,0,0,1.8-1.41C36.92,36.33,36.94,34.09,37,29.31Zm-2.62,3.21a8.65,8.65,0,0,1-.12,1.41C34,35.54,32.17,35.8,32,35.82h0A2.73,2.73,0,0,1,29,33V28.26a3.87,3.87,0,0,1,.19-1c.2-.56.38-1.7,2.65-1.7a2.48,2.48,0,0,1,2.55,2.65v2.45a.29.29,0,0,1-.29.29h-3a.3.3,0,0,0-.3.3V33a1,1,0,0,0,1,1.13c.76,0,.76-1.13.76-1.13v-.46a.29.29,0,0,1,.3-.3h1.22A.31.31,0,0,1,34.42,32.52ZM30.8,29.19a.3.3,0,0,0,.3.3h1.2a.31.31,0,0,0,.3-.3v-.93s-.1-1-.85-1-.95.85-.95,1ZM20.72,15s.84.09.84-1V9.3s.09-1.22-.84-1.22c0,0-.94-.1-.94,1.22V14C19.78,15.11,20.72,15,20.72,15Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a href="https://plus.google.com/+purenewzealand" target="_blank">
+            <svg class="myFooter__google" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.38 42.38">
+              <defs>
+                <style>.cls-1{fill:#fff;fill-rule:evenodd;}</style>
+              </defs>
+              <title>Asset 7</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="myFooter__google--orange" d="M40.56,0H1.82A1.81,1.81,0,0,0,0,1.82V40.56a1.81,1.81,0,0,0,1.82,1.82H40.56a1.81,1.81,0,0,0,1.82-1.82V1.82A1.81,1.81,0,0,0,40.56,0ZM25.65,23.31a9,9,0,0,1-2.29,5.34c-3.45,3.67-9.86,3.64-13.55-.07A9.67,9.67,0,0,1,9.9,15a9.52,9.52,0,0,1,10.17-2l1.41.69,1.46,1-2.51,2.48-.87-.59a5.84,5.84,0,0,0-7.15.89,6.35,6.35,0,0,0-.05,8.76,6,6,0,0,0,8.54,0,5.12,5.12,0,0,0,1.33-2.36l.06-.27H16.82v-3h8.75l.11.71Zm11.69-.11H34.59V26h-2.7V23.2H29.14V20.51h2.75V17.75h2.7v2.76h2.75Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="myFooter__pure">
+          <a href="https://www.tourismnewzealand.com/" target="_blank">
+            <svg class="myFooter_pureLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222.21 49.86">
+              <defs>
+                <style>.cls-1{fill:#fbfdff;}</style>
+              </defs>
+              <title>Asset 1</title>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path class="myFooter_pureLogo--grey" d="M104.24,14.29l-.9.53.15,1.63-1.12.6-.15-.82-1.42.08-.67,1.56.45.67-1.34,3.05-2.31,3.8-1.49.82-.53-.67-1.19.07-.38-.82,1.72-3.35-.74-1.34-3-1.41-.07-1.12,2-1.56L94,13.4l.22-2.53L89.32,3.5V2.75L87.53.82,88.8,0l1.34,2.08L91.86,2,94.24,4.1l.67,2.53L94.61,8l1,1.56L96,9.23l-.15-1.71,1.5-.15,1.19,3.5,2.08.74,3.07-1.71L104.91,11l-.38,1.56ZM82.83,44l1-.3v-1l1.2-2.83,1-3.2,1.49-1.12,1.57.3.67-.22.23-.75-.9-1.11.22-.6,1.5-1.86L91.11,30l.82-.44,1-2.24-.22-.59.15-.82-.15-.3.15-.89-1.12-.52L90,25.46l-.08-.14.16-.9-.53-.3-.44.15L89,24.05l.22-.52.23-.37-.23-.45-2,1.56-.9,3.2-1.26.75-.68,3.05L79,36.48,77.23,37l-2.46,3.5-1.64,3.8,1,1.27L76,45.12l.45.67h1l.07.67,1.87.07,1.79-1Zm-6.34,2.75L75.7,47l.24,1-1.18,1.61.42.25,2.54-.65.4-1.05-.32-.31ZM4.4,46H14.53V.6H9.24L5.81,4H0V13H4.4Zm28-35.54a1.62,1.62,0,0,0-1.58-1.78h-.71a1.62,1.62,0,0,0-1.58,1.78V36.14a1.62,1.62,0,0,0,1.58,1.78h.71a1.62,1.62,0,0,0,1.58-1.78ZM36.14.6,42.54,7V39.64L36.14,46H24.81l-6.41-6.4V7L24.81.6ZM56.55,36.14a1.63,1.63,0,0,0,1.58,1.78h.71a1.63,1.63,0,0,0,1.59-1.78V10.5a1.63,1.63,0,0,0-1.59-1.78h-.71a1.63,1.63,0,0,0-1.58,1.78ZM52.83,46l-6.41-6.4V7L52.83.6H64.15L70.56,7V39.64L64.15,46ZM134,10.36a1.51,1.51,0,0,0-1.58-1.64h-2.07V21.83h2.07A1.52,1.52,0,0,0,134,20.18ZM137.82.6l6.34,6.33V23.62L137.82,30h-7.43V46H120.26V.6Zm9.51,0v39l6.41,6.4h11.33l6.4-6.4V.6H161.34V36.14a1.63,1.63,0,0,1-1.58,1.78H159a1.62,1.62,0,0,1-1.57-1.78V.6Zm41.8,9.76a1.51,1.51,0,0,0-1.58-1.64h-2.07V20h2.07a1.51,1.51,0,0,0,1.58-1.65Zm10.12,9.31-4.47,4.47,4.47,4.47V41.05l.53,5H189.65l-.53-4.39V30.26a1.52,1.52,0,0,0-1.58-1.65h-2.06V46H175.35V.6h17.56l6.34,6.33ZM203.09,46h19.12V37.33h-9V27.42h8.24V18.7h-8.24V9.31h9V.6H203.09ZM77.46.59h6.26l3.73,3.73v12L83.72,20H77.46L73.73,16.3v-12Zm2,12.74c0,1,.38,1.56,1.12,1.56s1.12-.6,1.12-1.56v-6c0-1-.38-1.57-1.12-1.57s-1.12.6-1.12,1.57ZM104.91,46H98.64l-3.73-3.72v-12l3.73-3.72h6.27l3.73,3.72v12Zm-2-12.73c0-1-.37-1.56-1.11-1.56s-1.12.59-1.12,1.56v6c0,1,.37,1.56,1.12,1.56s1.11-.59,1.11-1.56Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- pick up footer -->
+    <div class="container-fluid pickUp" id="hiddenPickup">
+      <div class="row">
+        <div class="pickUp__left">
+          <svg class="pickUp__back" id="backPick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.04 48.13">
+            <defs></defs>
+            <title>Asset 9</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="pickUp__back--orange" d="M23.85,44.59a.46.46,0,0,1-.54.37l-.14-.05L0,22.7v-.48L23.17.17a.37.37,0,0,1,.51-.11.35.35,0,0,1,.17.28V12.65c20.29,2.92,32.3,16.22,36.19,35,0,.32-.5.65-.68.32-8.79-11.83-20.8-15.88-35.51-16Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="pickUp__center">
+          <div class="pickup__centerTop">
+            <h2 class="pickUp__center--text">PICK UP LOCATION</h2>
+          </div>
+          <div class="btn-group dropup pickup__centerBottom">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              SELECT
+            </button>
+            <div class="dropdown-menu">
+              <div class="pickup__locations" onclick="pickAuck()">Auckland</div>
+              <div class="pickup__locations" onclick="pickTaupo()">Taupo</div>
+              <div class="pickup__locations" onclick="pickWgtn()">Wellington</div>
+              <div class="pickup__locations" onclick="pickChurch()">Christchurch</div>
+              <div class="pickup__locations" onclick="pickQueen()">Queenstown</div>
+            </div>
+          </div>
+        </div>
+        <div class="pickUp__right">
+          <svg class="pickUp__forward" id="forwardPick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.5 49.3">
+            <defs></defs>
+            <title>Asset 13</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="pickUp__forward--green" d="M37.07,32.72C22,32.89,9.7,37,.69,49.16c-.17.33-.69,0-.69-.33C4,29.57,16.28,16,37.07,13V.34A.38.38,0,0,1,37.48,0a.4.4,0,0,1,.29.18L61.5,22.76v.5L37.77,46a.48.48,0,0,1-.65-.19.78.78,0,0,1,0-.14Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- drop off footer -->
+    <div class="container-fluid dropOff" id="hiddenDropOff">
+      <div class="row">
+        <div class="dropOff__left">
+          <svg class="dropOff__back" id="backDrop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.04 48.13">
+            <defs></defs>
+            <title>Asset 9</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="dropOff__back--orange" d="M23.85,44.59a.46.46,0,0,1-.54.37l-.14-.05L0,22.7v-.48L23.17.17a.37.37,0,0,1,.51-.11.35.35,0,0,1,.17.28V12.65c20.29,2.92,32.3,16.22,36.19,35,0,.32-.5.65-.68.32-8.79-11.83-20.8-15.88-35.51-16Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="dropOff__center">
+          <div class="dropOff__centerTop">
+            <h2 class="dropOff__center--text">DROP OFF LOCATION</h2>
+          </div>
+          <div class="btn-group dropup dropOff__centerBottom">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              SELECT
+            </button>
+            <div class="dropdown-menu">
+              <div class="dropOff__locations" onclick="dropAuck()">Auckland</div>
+              <div class="dropOff__locations" onclick="dropTaupo()">Taupo</div>
+              <div class="dropOff__locations" onclick="dropWgtn()">Wellington</div>
+              <div class="dropOff__locations" onclick="dropChurch()">Christchurch</div>
+              <div class="dropOff__locations" onclick="dropQueen()">Queenstown</div>
+            </div>
+          </div>
+        </div>
+        <div class="dropOff__right">
+          <svg class="dropOff__forward" id="forwardDrop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.5 49.3">
+            <defs></defs>
+            <title>Asset 13</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="dropOff__forward--green" d="M37.07,32.72C22,32.89,9.7,37,.69,49.16c-.17.33-.69,0-.69-.33C4,29.57,16.28,16,37.07,13V.34A.38.38,0,0,1,37.48,0a.4.4,0,0,1,.29.18L61.5,22.76v.5L37.77,46a.48.48,0,0,1-.65-.19.78.78,0,0,1,0-.14Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- how many days footer -->
+    <div class="container-fluid days" id="hiddenDays">
+      <div class="row">
+        <div class="days__left">
+          <svg class="days__back" id="backDays" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.04 48.13">
+            <defs></defs>
+            <title>Asset 9</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="days__back--orange" d="M23.85,44.59a.46.46,0,0,1-.54.37l-.14-.05L0,22.7v-.48L23.17.17a.37.37,0,0,1,.51-.11.35.35,0,0,1,.17.28V12.65c20.29,2.92,32.3,16.22,36.19,35,0,.32-.5.65-.68.32-8.79-11.83-20.8-15.88-35.51-16Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="days__center">
+          <div class="days__centerTop">
+            <h2 class="days__center--text">HOW MANY DAYS</h2>
+          </div>
+          <div class="qty mt-5 days__centerBottom">
+            <span id="dayMinus" class="minus bg-dark">-</span>
+            <input type="number" class="count" name="qty" value="1" id="days">
+            <span id="dayPlus" class="plus bg-dark">+</span>
+          </div>
+        </div>
+        <div class="days__right">
+          <svg class="days__forward" id="forwardDays" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.5 49.3">
+            <defs></defs>
+            <title>Asset 13</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="days__forward--green" d="M37.07,32.72C22,32.89,9.7,37,.69,49.16c-.17.33-.69,0-.69-.33C4,29.57,16.28,16,37.07,13V.34A.38.38,0,0,1,37.48,0a.4.4,0,0,1,.29.18L61.5,22.76v.5L37.77,46a.48.48,0,0,1-.65-.19.78.78,0,0,1,0-.14Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- how many people footer -->
+    <div class="container-fluid people" id="hiddenPeople">
+      <div class="row">
+        <div class="people__left">
+          <svg class="people__back" id="backPeople" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.04 48.13">
+            <defs></defs>
+            <title>Asset 9</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="people__back--orange" d="M23.85,44.59a.46.46,0,0,1-.54.37l-.14-.05L0,22.7v-.48L23.17.17a.37.37,0,0,1,.51-.11.35.35,0,0,1,.17.28V12.65c20.29,2.92,32.3,16.22,36.19,35,0,.32-.5.65-.68.32-8.79-11.83-20.8-15.88-35.51-16Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="people__center">
+          <div class="people__centerTop">
+            <h2 class="people__center--text">HOW MANY PEOPLE</h2>
+          </div>
+          <div class="qty mt-5 people__centerBottom">
+            <span id="peopMinus" class="minus bg-dark">-</span>
+            <input type="number" class="count" name="qty" value="1" id="people">
+            <span id="peopPlus" class="plus bg-dark">+</span>
+          </div>
+        </div>
+        <div class="people__right">
+          <svg class="people__forward" id="forwardPeople" onclick="dispVehicle()" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 61.5 49.3">
+            <defs></defs>
+            <title>Asset 13</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="people__forward--green" d="M37.07,32.72C22,32.89,9.7,37,.69,49.16c-.17.33-.69,0-.69-.33C4,29.57,16.28,16,37.07,13V.34A.38.38,0,0,1,37.48,0a.4.4,0,0,1,.29.18L61.5,22.76v.5L37.77,46a.48.48,0,0,1-.65-.19.78.78,0,0,1,0-.14Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- select a vehicle -->
+    <div class="container-fluid vehicle" id="hiddenVehicle">
+      <div class="row">
+        <div class="vehicle__left">
+          <svg class="vehicle__back" id="backVehicle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.04 48.13">
+            <defs></defs>
+            <title>Asset 9</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="vehicle__back--orange" d="M23.85,44.59a.46.46,0,0,1-.54.37l-.14-.05L0,22.7v-.48L23.17.17a.37.37,0,0,1,.51-.11.35.35,0,0,1,.17.28V12.65c20.29,2.92,32.3,16.22,36.19,35,0,.32-.5.65-.68.32-8.79-11.83-20.8-15.88-35.51-16Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="vehicle__center">
+          <div class="vehicle__centerTop">
+            <h2 class="vehicle__center--text">SELECT A VEHICLE</h2>
+          </div>
+          <div class="vehicle__centerBottom">
+            <div onclick="dispMoto()" id="moto" class="vehicle__centerMoto" data-toggle="modal" data-target="#modalMoto">
+              <svg Class="vehicle__moto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.4 35.85">
+                <defs>
+                  <style>.cls-1{fill:#fbfeff;}</style>
+                </defs>
+                <title>Asset 5</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="vehicle__moto--color" d="M30.8,27.5a1,1,0,0,1-1,.88H24.31a1,1,0,0,1-.74-.31,1,1,0,0,1-.29-.74,10.7,10.7,0,0,0-2.83-6.91c-2.1-2.13-5.22-3.21-9.29-3.21a1,1,0,0,1-.67-.24L.38,8.37A1,1,0,0,1,.07,7.23a1,1,0,0,1,1-.67H9.61a1.07,1.07,0,0,1,.66.24L13.5,9.54H28.83a15.17,15.17,0,0,1,6.22-4L28.54,1.93A1,1,0,0,1,28.11.59l0-.06A1,1,0,0,1,29.49.12l.05,0,8.33,4.63a24.27,24.27,0,0,1,4.89-.47,1.13,1.13,0,0,1,.59.18c5.4,3.79,7.2,7.48,5.34,11A1,1,0,0,1,47.6,16c-.07,0-6.86-1.2-11.79,2.34C33.07,20.27,31.38,23.37,30.8,27.5ZM12.4,19.75h0a8.05,8.05,0,1,0,8.1,8A8.05,8.05,0,0,0,12.36,19.75Zm28.93,0h0a8.05,8.05,0,1,0,8.1,8A8.05,8.05,0,0,0,41.29,19.75Z" />
+                  </g>
+                </g>
+              </svg>
+              <h2 class="vehicle__centerMoto--text">1 SEATER</h2>
+            </div>
+            <div onclick="dispCoupe()" id="coupe" class="vehicle__centerCoupe" data-toggle="modal" data-target="#modalCoupe">
+              <svg class="vehicle__coupe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.81 17.2">
+                <defs>
+                  <style>.cls-1{fill:#fff;}</style>
+                </defs>
+                <title>Asset 11</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="vehicle__coupe--color" d="M0,11.45v.31A5.76,5.76,0,0,1,5.3,7.67h0a5.45,5.45,0,0,1,5.52,5.38,5.39,5.39,0,0,1-.16,1.39l14,.16a5.46,5.46,0,1,1,10.64-.16.31.31,0,0,0-.08.24,3.2,3.2,0,0,0,2.05-1.58A4.71,4.71,0,0,0,36.82,8a2.75,2.75,0,0,0-1.26-1C27.91,4,32.17,6.25,23.34.89A3.37,3.37,0,0,0,21.85.34,59.18,59.18,0,0,0,7.9.49a2.48,2.48,0,0,0-1.58.64A42.77,42.77,0,0,0,1.44,5.46C.33,6.64-.06,9.71,0,11.45ZM14,1.6h0a51,51,0,0,1,7.72.31,4,4,0,0,1,.87.32c1.65,1,2.91,1.81,3.86,2.36L13.89,4.51C13.1,2.54,13.89,1.68,14,1.6ZM8.06,4.43a6.92,6.92,0,0,1,2.44-2.6,15.1,15.1,0,0,1,1.65-.15,4.06,4.06,0,0,0,0,2.75ZM5.46,9.24a4,4,0,0,1,3.82,4.18c0,.13,0,.26,0,.39A3.9,3.9,0,0,1,5.38,17h0a3.85,3.85,0,0,1-3.86-3.5A3.9,3.9,0,0,1,5.06,9.26Zm28.29,4.89A3.88,3.88,0,0,1,30,17.2h0A4,4,0,0,1,26.18,14a3.87,3.87,0,0,1,7.6-1.44,3.92,3.92,0,0,1,0,1.6Z" />
+                  </g>
+                </g>
+              </svg>
+              <h2 class="vehicle__centerCoupe--text">2 SEATER</h2>
+            </div>
+            <div onclick="dispHatch()" id="hatch" class="vehicle__centerHatch" data-toggle="modal" data-target="#modalHatch">
+              <svg class="vehicle__hatch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.54 19.96">
+                <defs>
+                  <style>.cls-1{fill:#fff;}</style>
+                </defs>
+                <title>Asset 12</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="vehicle__hatch--color" d="M31,15.28a4.55,4.55,0,1,0,4.68-4.42h-.13A4.51,4.51,0,0,0,31,15.28Zm-27.38,0a4.5,4.5,0,0,0,4.55,4.43,4.43,4.43,0,1,0,.42-8.85H8.17A4.51,4.51,0,0,0,3.62,15.28ZM.09,12.49a4.16,4.16,0,0,0,1.67,2.88v-.09A6.34,6.34,0,0,1,8.17,9.06a6.33,6.33,0,0,1,6.41,6.22,2.79,2.79,0,0,1-.09.91H29.25a3.47,3.47,0,0,1-.09-.91,6.41,6.41,0,1,1,12.82,0,2.53,2.53,0,0,1-.1.91h.19a2.11,2.11,0,0,0,2-1.36c1.4-3.52-.09-7.76-8.45-8.93-1.58-.27-1.95-.63-8.45-4.51A3.87,3.87,0,0,0,25.82.85,48.8,48.8,0,0,0,7.71.85a3.4,3.4,0,0,0-1.95,1L1.49,6.17A4.1,4.1,0,0,0,.37,8.07,12,12,0,0,0,.09,12.49ZM20.06,2a52.12,52.12,0,0,1,5.29.72,1.55,1.55,0,0,1,.84.27l5.29,3.16-1.86.63a1,1,0,0,1-.55.09l-9-.36ZM10.4,6V2.29a57.82,57.82,0,0,1,7.89-.36v4.6l-7.7-.27A.29.29,0,0,1,10.31,6Z" />
+                  </g>
+                </g>
+              </svg>
+              <h2 class="vehicle__centerCoupe--text">5 SEATER</h2>
+            </div>
+            <div onclick="dispFamily()" id="family" class="vehicle__centerFamily" data-toggle="modal" data-target="#modalFamily">
+              <svg class="vehicle__family" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.39 44.51">
+                <defs>
+                  <style>.cls-1{fill:#fbfdff;}</style>
+                </defs>
+                <title>Asset 4</title>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="vehicle__family--color" data-name="Layer 2" class="cls-1" d="M20.3,24A10.25,10.25,0,1,1,10.05,34.26,10.25,10.25,0,0,1,20.3,24Zm68.34,0A10.25,10.25,0,1,1,78.39,34.26,10.25,10.25,0,0,1,88.64,24Zm20.5.23a13.43,13.43,0,0,0-1.82-4.78,6.38,6.38,0,0,0-4.1-3.19c-17.54-5.24-17.54-5-19.36-5.93L71.33,3.74C61.07-1.5,25.76-.36,14.15,1.91a8,8,0,0,0-5.7,3.88c-2.51,4.1-4.78,5.92-5.24,9.79a22.8,22.8,0,0,1-2,6.84c-.23.45-.23.68-.45,1.14A19,19,0,0,0,0,27.88a8.34,8.34,0,0,0,4.79,8c.22.23.45.23.68.45,0-.68-.23-1.36-.23-2a14.81,14.81,0,1,1,29.62,0,15.81,15.81,0,0,1-.46,3.42H74.29a17.16,17.16,0,0,1-.46-3.42,14.81,14.81,0,0,1,29.62,0,6.19,6.19,0,0,1-.23,2c.45-.22.91-.22,1.37-.45a6.7,6.7,0,0,0,3.64-3.42A14,14,0,0,0,109.14,24.24ZM25.76,11.39,10,11.16,12.1,8a4.54,4.54,0,0,1,3-1.82A75.64,75.64,0,0,1,25.8,4.81ZM51.28,16H34.88a3,3,0,0,1-2.28-1l-2.28-2.28V4.56c6.15-.23,13-.23,20.73.22V16Zm30.53-1.6a2.42,2.42,0,0,1-2.06,1.82H55.83V5.33c6.38.46,9.57.46,13.67,2.51l12.31,6.6Z" />
+                  </g>
+                </g>
+              </svg>
+              <h2 class="vehicle__family--text">7 SEATER</h2>
+            </div>
+          </div>
+        </div>
+        <div class="vehicle__right">
+          <svg class="vehicle__forward" id="forwardPeople" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.5 49.3">
+            <defs></defs>
+            <title>Asset 13</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <g id="Layer_2-2" data-name="Layer 2">
+                  <g id="Layer_1-2-2" data-name="Layer 1-2">
+                    <path class="vehicle__forward--green" d="M37.07,32.72C22,32.89,9.7,37,.69,49.16c-.17.33-.69,0-.69-.33C4,29.57,16.28,16,37.07,13V.34A.38.38,0,0,1,37.48,0a.4.4,0,0,1,.29.18L61.5,22.76v.5L37.77,46a.48.48,0,0,1-.65-.19.78.78,0,0,1,0-.14Z" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- bodyContainer ends -->
+  </div>
+
+
+  <!-- javascript links -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIlisV_wi6joNV6QIDqj6rq3usSKgMIJM"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIlisV_wi6joNV6QIDqj6rq3usSKgMIJM&libraries=places&callback=initMap"
+        async defer></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

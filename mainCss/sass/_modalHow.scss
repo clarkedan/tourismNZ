@@ -1,0 +1,51 @@
+.modalWorks{
+    background-color: $myBlack;
+    border: solid 4px $white;
+}
+.modalWorks__header{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    color: $green;
+    letter-spacing: 2px;
+}
+.modalWorks__body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: $white;
+    letter-spacing: 1px;  
+}
+ol{
+    list-style-position: outside;
+    margin-left: 30px;
+    color: $orange;
+}
+.modalWorks__body--white{ 
+    color: $white;
+}
+.myClose{
+    color: $white;
+    opacity: 1;
+    text-shadow: none;
+    font-size: 3em;
+}
+ul{
+    list-style-type: none;
+}
+.close:hover{
+    color: $red!important;
+}
+.modalWorks__conditions p{
+    color: $green; 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.45em; 
+    margin-bottom: 5px; 
+}    
+.modalWorks__moto{
+    color: $white;
+}
+.modalWorks__span{
+    color: $orange;
+}

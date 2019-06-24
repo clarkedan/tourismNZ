@@ -1,0 +1,90 @@
+.pickUp{
+    height: 160px;
+    background-color:$myBlack;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+.pickUp__left{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.pickUp__back{
+    height: 100px;
+    float: right;
+    cursor: pointer;
+}
+.pickUp__back--orange{
+    fill: $orange;
+    opacity: 0.80;
+}
+.pickUp__back--orange:hover{
+    opacity: 1;
+}
+.pickUp__center{
+    height: 160px;
+    width: 60%;
+    text-align: center; 
+    padding-top: 10px;
+}
+.pickup__centerTop{
+    height: 40%;
+    width: 100%;
+}
+.pickUp__center--text{
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 600; 
+    letter-spacing: 3px;
+}
+.pickUp__right{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.pickUp__forward{
+    height: 100px;
+    cursor: pointer;
+}
+.pickUp__forward--green{
+    fill: $green;
+    opacity: 0.85;
+}
+.pickUp__forward--green:hover{
+    opacity: 1;
+}
+.pickup__centerBottom{
+    margin-top: 10px;
+}
+.btn {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    width: 200px;
+    letter-spacing: 3px;
+    border: none;
+    font-size: 2rem;
+    border-radius: 0.50rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: $grey;
+    color: black;
+}
+.btn:hover{
+    color: $white;
+}
+.dropdown-menu{
+    width: 200px;
+    font-size: 1.5em;
+}
+.show{
+    letter-spacing: 3px;
+    padding-right: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+.pickup__locations{
+    margin: 10px;
+    cursor: pointer;
+}

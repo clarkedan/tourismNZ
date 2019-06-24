@@ -1,0 +1,19 @@
+.myNav{
+    background-color: $myBlack;
+    height: 100px;
+}
+.myNav__logo{
+    height: 55px;
+}
+.myNav__question{
+    height: 45px;
+    cursor: pointer;
+}
+.myNav_question--grey{
+    fill: $white;
+    opacity: 0.85;
+}
+.myNav_question--grey:hover{
+    fill: $white;
+    opacity: 1;
+}

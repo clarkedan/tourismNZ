@@ -1,0 +1,72 @@
+.modalFiveSeat{
+    background-color: $myBlack;
+    border: solid 4px $white;
+}
+.modalFiveSeat__header{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    color: $green;
+    letter-spacing: 3px;
+}
+.modalFiveSeat__info{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    color: $white;
+    letter-spacing: 1px;
+}
+.modalFiveSeat__body--white{ 
+    color: $white;
+}
+.myClose{
+    color: $white;
+    opacity: 1;
+    text-shadow: none;
+    font-size: 3em;
+}
+.modalFiveSeat__more{
+    color: $orange;
+    opacity: 0.8;
+}
+.modalFiveSeat__more:hover{
+    opacity: 1;
+}
+.modalFiveSeat__price{
+    font-family: Montserrat;
+    font-size: 1.25em;
+    color: $grey;
+}
+.modalFiveSeat__pickUp{
+    font-family: Montserrat;
+    font-size: 1.25em;
+    color: $grey;
+}
+.modalFiveSeat__dropOff{
+    font-family: Montserrat;
+    font-size: 1.25em;
+    color: $grey;
+}
+.modalFiveSeat__days{
+    font-family: Montserrat;
+    font-size: 1.25em;
+    color: $grey;
+}
+.modalFiveSeat__people{
+    font-family: Montserrat;
+    font-size: 1.25em;
+    color: $grey;
+}
+.modalFiveSeat__total{
+    font-family: Montserrat;
+    font-size: 1.25em;
+    color: $grey;
+}
+.modalFiveSeat__Kw{
+    font-family: Montserrat;
+    font-size: 1.25em;
+    color: $grey;
+}
+.answer{
+    color: $white;
+}

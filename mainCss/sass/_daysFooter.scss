@@ -1,0 +1,136 @@
+.days{
+    height: 160px;
+    // background-color: #333;
+    background-color:$myBlack;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+.days__left{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.days__back{
+    height: 100px;
+    float: right;
+    cursor: pointer;
+}
+.days__back--orange{
+    fill: $orange;
+    opacity: 0.80;
+}
+.days__back--orange:hover{
+    opacity: 1;
+}
+.days__center{
+    height: 160px;
+    width: 60%;
+    // background-color: #666;
+    text-align: center; 
+    padding-top: 5px;
+}
+.days__centerTop{
+    height: 40%;
+    width: 100%;
+    text-align: center; 
+    padding-top: 5px;
+}
+.days__center--text{
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 600; 
+    letter-spacing: 3px;
+}
+.days__right{
+    height: 160px;
+    width: 20%;
+    padding-top: 30px;
+}
+.days__forward{
+    height: 100px;
+    cursor: pointer;
+}
+.days__forward--green{
+    fill: $green;
+    opacity: 0.85;
+}
+.days__forward--green:hover{
+    opacity: 1;
+}
+// plus and minus counter
+.qty .count {
+    color: $myBlack;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 55px;
+    min-height: 55px;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: $white;
+    width: 55px;
+    height: 55px;
+    font: 55px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    }
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: $white;
+    width: 55px;
+    height: 55px;
+    font: 55px/0.85 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+    margin-right: 10px;
+}
+.days__centerBottom {
+    text-align: center;
+    margin-top: 17px!important;
+}
+.minus:hover{
+    // background-color: $red!important;
+    color: black;
+}
+.plus:hover{
+    // background-color: $red!important;
+    color:black;
+}
+.bg-dark{
+    background-color: $grey!important;
+}
+/*Prevent text selection*/
+span{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+input{  
+    border: 0;
+    width: 2%;
+}
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled{
+    background-color:white;
+}

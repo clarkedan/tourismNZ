@@ -1,0 +1,432 @@
+@media only screen and (max-width : 768px) {
+    .myBody__started{
+        width: 430px;
+        height: 70px;
+        margin-left: -215px;
+        margin-top: -35px;
+    }
+    .myBody__btn{
+        font-size: 2.2em;
+    }
+    .myFooter__social{
+        width: 60%;
+        padding-top: 16px;
+    }
+    .myFooter__pure{
+        height: 100%;
+        width: 40%;
+        padding-top: 15px;
+    }
+    .myFooter_pureLogo{
+        height: 38px;
+    }
+    .myFooter__face{
+        height: 32px;
+    }
+    .myFooter__insta{
+        height: 32px;
+        margin-left: 10px;
+    }
+    .myFooter__twit{
+        height: 32px;
+        margin-left: 10px;
+    }
+    .myFooter__tube{
+        height: 32px;
+        margin-left: 10px;
+    }
+    .myFooter__google{
+        height: 32px;
+        margin-left: 10px;
+    }
+    // pick up footer
+    .pickUp{
+        height: 140px;
+    }
+    .pickUp__left{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .pickUp__back{
+        height: 75px;
+    }
+    .pickUp__center{
+        width: 70%;
+        height: 140px;
+    }
+    .pickUp__center--text{
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+    .pickUp__right{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .pickUp__forward{
+        height: 75px;
+    }
+      // drop off footer
+    .dropOff{
+        height: 140px;
+    }
+    .dropOff__left{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .dropOff__back{
+        height: 75px;
+    }
+    .dropOff__center{
+        width: 70%;
+        height: 140px;
+    }
+    .dropOff__center--text{
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+    .dropOff__right{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .dropOff__forward{
+        height: 75px;
+    }
+      // how many days footer
+    .days{
+        height: 140px;
+    }
+    .days__left{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .days__back{
+        height: 75px;
+    }
+    .days__center{
+        width: 70%;
+        height: 140px;
+    }
+    .days__center--text{
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+    .days__right{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .days__forward{
+        height: 75px;
+    }
+    // how many people footer
+    .people{
+        height: 140px;
+    }
+    .people__left{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .people__back{
+        height: 75px;
+    }
+    .people__center{
+        width: 70%;
+        height: 140px;
+    }
+    .people__center--text{
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+    .people__right{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .people__forward{
+        height: 75px;
+    }
+    // select a vehicle
+    .vehicle{
+        height: 140px;
+    }
+    .vehicle__left{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .vehicle__back{
+        height: 75px;
+    }
+    .vehicle__center{
+        width: 70%;
+        height: 140px;
+    }
+    .vehicle__center--text{
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+    .vehicle__right{
+        height: 140px;
+        width: 15%;
+        padding-top: 30px;
+    }
+    .vehicle__forward{
+        height: 75px;
+    }
+    // plus and minus counter
+    .qty .count {     
+        font-size: 45px;
+        line-height: 30px;
+        min-height: 30px;
+    }
+    .qty .plus {
+        width: 45px;
+        height: 45px;
+        font: 45px/1 Arial,sans-serif;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+    .qty .minus {
+        width: 45px;
+        height: 45px;
+        font: 45px/0.85 Arial,sans-serif;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .days__centerBottom {
+        margin-top: 0px!important;
+    }
+    .days__centerTop{
+        height: 40%;
+    }
+    .people__centerBottom {
+        margin-top: 0px!important;
+    }
+
+    // pick up selecter
+    .pickup__centerBottom{
+        margin-top: 15px;
+    }
+    .btn {
+        width: 180px;
+        letter-spacing: 3px;
+        font-size: 1.75rem;
+    }
+    .dropdown-menu{
+        width: 180px;
+        font-size: 1.25em;
+    }
+    .show{
+        letter-spacing: 3px;
+        padding-right: 5px;
+    }
+    .pickup__locations{
+        margin: 10px;
+    }
+    .pickup__centerTop{
+        height: 30%;
+        width: 100%;
+    }
+
+     //drop off selecter
+     .dropOff__centerBottom{
+        margin-top: 15px;
+    }
+    .dropOff__locations{
+        margin: 10px;
+    }
+    .dropOff__centerTop{
+        height: 30%;
+        width: 100%;
+    }
+
+    // Vehicle Selection
+    // 1 seater
+    .vehicle__moto{
+        height: 40px;
+        margin-bottom: 3px;
+    }
+    .vehicle__centerMoto--text{
+        font-size: 1.25em;
+        letter-spacing: 2px;
+    }
+    // 2 seater
+    .vehicle__coupe{
+        height: 40px;
+        margin-bottom: 3px;
+    }
+    .vehicle__centerCoupe--text{
+        font-size: 1.25em;
+        letter-spacing: 2px;
+    }
+    // 5 seater
+    .vehicle__hatch{
+        height: 40px;
+        margin-bottom: 3px;
+    }
+    .vehicle__hatch--text{
+        font-size: 1.25em;
+        letter-spacing: 2px;
+    }
+    // 7 seater
+    .vehicle__family{
+        height: 40px;
+        margin-bottom: 3px;
+    }
+    .vehicle__family--text{
+        font-size: 1.25em;
+        letter-spacing: 2px;
+    }
+
+    // Vehicle modals
+    // moto
+    .modalOneSeat__header{
+        font-size: 2.5em;
+    }
+    .modalOneSeat__info{
+        font-size: 1.2em;
+    }
+    .modalOneSeat__price{
+        font-size: 1.1em;
+    }
+    .modalOneSeat__pickUp{
+        font-size: 1.1em;
+    }
+    .modalOneSeat__dropOff{
+        font-size: 1.1em;
+    }
+    .modalOneSeat__days{
+        font-size: 1.1em;
+    }
+    .modalOneSeat__people{
+        font-size: 1.1em;
+    }
+    .modalOneSeat__total{
+        font-size: 1.1em;
+    }
+    .modalOneSeat__Kw{
+        font-size: 1.1em;
+    }
+    .buttonBack{
+        width: 230px;
+        height: 50px;
+        font-size: 2em;
+    }
+    .buttonProceed{
+        width: 230px;
+        height: 50px;
+        font-size: 2em;
+    }
+
+    // coupe
+    .modalTwoSeat__header{
+        font-size: 2.5em;
+    }
+    .modalTwoSeat__info{
+        font-size: 1.2em;
+    }
+    .modalTwoSeat__price{
+        font-size: 1.1em;
+    }
+    .modalTwoSeat__pickUp{
+        font-size: 1.1em;
+    }
+    .modalTwoSeat__dropOff{
+        font-size: 1.1em;
+    }
+    .modalTwoSeat__days{
+        font-size: 1.1em;
+    }
+    .modalTwoSeat__people{
+        font-size: 1.1em;
+    }
+    .modalTwoSeat__total{
+        font-size: 1.1em;
+    }
+    .modalTwoSeat__Kw{
+        font-size: 1.1em;
+    }
+
+    // hatch
+    .modalFiveSeat__header{
+        font-size: 2.5em;
+    }
+    .modalFiveSeat__info{
+        font-size: 1.2em;
+    }
+    .modalFiveSeat__price{
+        font-size: 1.1em;
+    }
+    .modalFiveSeat__pickUp{
+        font-size: 1.1em;
+    }
+    .modalFiveSeat__dropOff{
+        font-size: 1.1em;
+    }
+    .modalFiveSeat__days{
+        font-size: 1.1em;
+    }
+    .modalFiveSeat__people{
+        font-size: 1.1em;
+    }
+    .modalFiveSeat__total{
+        font-size: 1.1em;
+    }
+    .modalFiveSeat__Kw{
+        font-size: 1.1em;
+    }
+
+    // family
+    .modalSevenSeat__header{
+        font-size: 2.5em;
+    }
+    .modalSevenSeat__info{
+        font-size: 1.2em;
+    }
+    .modalSevenSeat__price{
+        font-size: 1.1em;
+    }
+    .modalSevenSeat__pickUp{
+        font-size: 1.1em;
+    }
+    .modalSevenSeat__dropOff{
+        font-size: 1.1em;
+    }
+    .modalSevenSeat__days{
+        font-size: 1.1em;
+    }
+    .modalSevenSeat__people{
+        font-size: 1.1em;
+    }
+    .modalSevenSeat__total{
+        font-size: 1.1em;
+    }
+    .modalSevenSeat__Kw{
+        font-size: 1.1em;
+    }
+    
+    //model How
+    .modalWorks__header{
+        font-size: 2.5em;
+    }
+    .modalWorks__body{
+        font-size: 1.25em;
+        color: $white;
+        letter-spacing: 1px;  
+    }
+    ol{
+        margin-left: 25px;
+    }
+    ul{
+        font-size: 1em;
+    }
+    .modalWorks__conditions p{
+        font-size: 1.35em;
+    }
+}
